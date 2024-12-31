@@ -1,8 +1,8 @@
-import { CreateUserUseCase } from './CreateUserUseCase'
-import { IdGenerator } from './IdGenerator'
-import { PasswordHasher } from './PasswordHasher'
-import { User } from './User'
-import { UserRepository } from './UserRepository'
+import { CreateUserUseCase } from './UserUseCase'
+import { IdGenerator } from '../IdGenerator'
+import { PasswordHasher } from '../PasswordHasher'
+import { User } from '../domain/User'
+import { UserRepository } from '../repositories/UserRepository'
 
 export class CreateUser implements CreateUserUseCase {
   constructor(

@@ -1,13 +1,13 @@
-import { CreateUser } from '../CreateUser'
+import { CreateUser } from '../usecases/CreateUser'
 import { IdGenerator } from '../IdGenerator'
 import { PasswordHasher } from '../PasswordHasher'
-import { UserRepository } from '../UserRepository'
+import { UserRepository } from '../repositories/UserRepository'
 
 describe('CreateUser Use Case', () => {
   const mockUserRepository: jest.Mocked<UserRepository> = {
     findByEmail: jest.fn(),
     save: jest.fn()
-  }
+  } as unknown as jest.Mocked<UserRepository>
 
   const mockIdGenerator: jest.Mocked<IdGenerator> = {
     generate: jest.fn(() => 'mocked-id')

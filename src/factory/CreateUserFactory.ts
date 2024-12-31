@@ -1,6 +1,6 @@
 import { BcryptPasswordHasher } from '../BcryptHasher'
-import { CreateUser } from '../CreateUser'
-import { CreateUserController } from '../CreateUserController'
+import { CreateUser } from '../usecases/CreateUser'
+import { CreateUserController } from '../controllers/CreateUserController'
 import { UserRepositoryInMemory } from '../infra/repositories/MemoryUserRepository'
 import { UuidGenerator } from '../UUIDGenerator'
 

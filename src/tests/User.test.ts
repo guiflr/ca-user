@@ -1,6 +1,6 @@
 import { IdGenerator } from '../IdGenerator'
 import { PasswordHasher } from '../PasswordHasher'
-import { User } from '../User'
+import { User } from '../domain/User'
 
 describe('User Domain', () => {
   const mockIdGenerator: IdGenerator = {

@@ -1,5 +1,5 @@
-import { IdGenerator } from './IdGenerator'
-import { PasswordHasher } from './PasswordHasher'
+import { IdGenerator } from '../IdGenerator'
+import { PasswordHasher } from '../PasswordHasher'
 
 export class User {
   private constructor(

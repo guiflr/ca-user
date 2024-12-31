@@ -1,5 +1,5 @@
 import { Controller } from './Controller'
-import { CreateUserUseCase } from './CreateUserUseCase'
+import { CreateUserUseCase } from '../usecases/UserUseCase'
 
 export interface HttpRequest {
   body: Record<string, any>

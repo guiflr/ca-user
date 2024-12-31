@@ -1,5 +1,5 @@
-import { User } from '../../User'
-import { UserRepository } from '../../UserRepository'
+import { User } from '../../domain/User'
+import { UserRepository } from '../../repositories/UserRepository'
 
 export class UserRepositoryInMemory implements UserRepository {
   private users: User[] = []
@@ -10,5 +10,9 @@ export class UserRepositoryInMemory implements UserRepository {
 
   async save(user: User): Promise<void> {
     this.users.push(user)
+  }
+
+  async findById(id: string): Promise<User | null> {
+    return this.users.find((user) => user.id === id) || null
   }
 }

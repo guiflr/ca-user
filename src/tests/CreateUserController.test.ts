@@ -1,5 +1,5 @@
-import { CreateUser } from '../CreateUser'
-import { CreateUserController } from '../CreateUserController'
+import { CreateUser } from '../usecases/CreateUser'
+import { CreateUserController } from '../controllers/CreateUserController'
 
 describe('CreateUserController', () => {
   const mockCreateUser: jest.Mocked<CreateUser> = {

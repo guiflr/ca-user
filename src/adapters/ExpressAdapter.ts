@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { Controller, HttpRequest } from '../Controller'
+import { Controller, HttpRequest } from '../controllers/Controller'
 
 export const expressAdapter = (controller: Controller) => {
   return async (req: Request, res: Response): Promise<void> => {
