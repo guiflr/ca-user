@@ -1,7 +1,7 @@
 import { User } from '../../domain/User'
 import { UserRepository } from '../../repositories/UserRepository'
 
-export class UserRepositoryInMemory implements UserRepository {
+class UserRepositoryInMemory implements UserRepository {
   private users: User[] = []
 
   async findByEmail(email: string): Promise<User | null> {
@@ -16,3 +16,5 @@ export class UserRepositoryInMemory implements UserRepository {
     return this.users.find((user) => user.id === id) || null
   }
 }
+
+export default new UserRepositoryInMemory()
