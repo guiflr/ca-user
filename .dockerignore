@@ -1,0 +1,24 @@
+# Ignorar node_modules do host (será instalado no contêiner)
+node_modules
+
+# Ignorar diretórios de build e logs locais
+dist/
+coverage/
+logs/
+*.log
+
+# Ignorar arquivos de configuração locais
+.env
+.env.local
+
+# Ignorar arquivos de controle de versão e IDE
+.git
+.gitignore
+.DS_Store
+.idea/
+.vscode/
+
+# Ignorar arquivos desnecessários do Prisma
+prisma/dev.db-journal
+prisma/migrations/
+prisma/.env
