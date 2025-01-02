@@ -15,6 +15,13 @@ class UserRepositoryInMemory implements UserRepository {
   async findById(id: string): Promise<User | null> {
     return this.users.find((user) => user.id === id) || null
   }
+
+  async update(user: User): Promise<void> {
+    const index = this.users.findIndex((u) => u.id === user.id)
+    if (index !== -1) {
+      this.users[index] = user
+    }
+  }
 }
 
 export default new UserRepositoryInMemory()
