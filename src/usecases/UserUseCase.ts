@@ -28,3 +28,11 @@ export interface UpdateUserInput {
 export interface UpdateUserUseCase {
   execute(input: UpdateUserInput): Promise<void>
 }
+
+export interface UpdateUserPasswordInput {
+  id: string
+  password: string
+}
+export interface UpdateUserPassowrdUseCase {
+  execute(input: UpdateUserPasswordInput): Promise<void>
+}
