@@ -1,8 +1,8 @@
-import { BcryptPasswordHasher } from '../BcryptHasher'
 import { CreateUser } from '../usecases/CreateUser'
 import { CreateUserController } from '../controllers/CreateUserController'
 import UserRepositoryInMemory from '../infra/repositories/MemoryUserRepository'
-import { UuidGenerator } from '../UUIDGenerator'
+import { UuidGenerator } from '../adapters/uuid/UUIDGenerator'
+import { BcryptPasswordHasher } from '../adapters/bcrypt/BcryptHasher'
 
 export function makeCreateUserController(): CreateUserController {
   const userRepository = UserRepositoryInMemory

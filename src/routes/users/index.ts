@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import { expressAdapter } from '../../adapters/ExpressAdapter'
 import { makeCreateUserController } from '../../factory/CreateUserFactory'
 import { makeGetUserController } from '../../factory/GetUserFactory'
 import { makeUpdateUserController } from '../../factory/UpdateUserFactory'
 import { makeUpdateUserPasswordController } from '../../factory/UpdateUserPasswordFactory'
+import { expressAdapter } from '../../adapters/express/ExpressAdapter'
 
 const userRoutes = Router()
 userRoutes.post('/users', expressAdapter(makeCreateUserController()))

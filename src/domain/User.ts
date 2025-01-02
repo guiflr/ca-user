@@ -1,5 +1,5 @@
-import { IdGenerator } from '../IdGenerator'
-import { PasswordHasher } from '../PasswordHasher'
+import { IdGenerator } from '../adapters/IdGenerator'
+import { PasswordHasher } from '../adapters/PasswordHasher'
 
 export type UserUpdate = {
   name: string

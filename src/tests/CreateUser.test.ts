@@ -1,6 +1,6 @@
 import { CreateUser } from '../usecases/CreateUser'
-import { IdGenerator } from '../IdGenerator'
-import { PasswordHasher } from '../PasswordHasher'
+import { IdGenerator } from '../adapters/IdGenerator'
+import { PasswordHasher } from '../adapters/PasswordHasher'
 import { UserRepository } from '../repositories/UserRepository'
 
 describe('CreateUser Use Case', () => {

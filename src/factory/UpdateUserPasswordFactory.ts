@@ -1,7 +1,7 @@
 import { UpdateUserPassword } from '../usecases/UpdateUserPassword'
 import { UpdateUserPasswordController } from '../controllers/UpdateUserPasswordController'
 import MemoryUserRepository from '../infra/repositories/MemoryUserRepository'
-import { BcryptPasswordHasher } from '../BcryptHasher'
+import { BcryptPasswordHasher } from '../adapters/bcrypt/BcryptHasher'
 
 export const makeUpdateUserPasswordController =
   (): UpdateUserPasswordController => {

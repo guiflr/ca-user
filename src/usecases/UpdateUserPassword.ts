@@ -1,5 +1,5 @@
 import { User } from '../domain/User'
-import { PasswordHasher } from '../PasswordHasher'
+import { PasswordHasher } from '../adapters/PasswordHasher'
 import { UserRepository } from '../repositories/UserRepository'
 
 interface UpdateUserPasswordInput {

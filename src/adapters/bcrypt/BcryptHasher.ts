@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import { PasswordHasher } from './PasswordHasher'
+import { PasswordHasher } from '../PasswordHasher'
 
 export class BcryptPasswordHasher implements PasswordHasher {
   constructor(private readonly saltRounds: number = 10) {}
