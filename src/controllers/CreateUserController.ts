@@ -1,14 +1,5 @@
-import { Controller } from './Controller'
+import { Controller, HttpRequest, HttpResponse } from './Controller'
 import { CreateUserUseCase } from '../usecases/UserUseCase'
-
-export interface HttpRequest {
-  body: Record<string, any>
-}
-
-export interface HttpResponse {
-  statusCode: number
-  body: any
-}
 
 export class CreateUserController implements Controller {
   constructor(private createUser: CreateUserUseCase) {}
