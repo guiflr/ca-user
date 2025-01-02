@@ -56,4 +56,17 @@ export class User {
 
     return { name, email }
   }
+
+  static async updatePassword(
+    newPassword: string,
+    passwordHasher: PasswordHasher
+  ): Promise<string> {
+    if (!newPassword || newPassword.length < 6) {
+      throw new Error('Password must be at least 6 characters')
+    }
+
+    const hashedPassword = await passwordHasher.hash(newPassword)
+
+    return hashedPassword
+  }
 }
