@@ -1,11 +1,11 @@
 import { CreateUser } from '../usecases/CreateUser'
 import { CreateUserController } from '../controllers/CreateUserController'
-import UserRepositoryInMemory from '../infra/repositories/MemoryUserRepository'
+import PrismaUserRepository from '../infra/repositories/PrismaUserRepository'
 import { UuidGenerator } from '../adapters/uuid/UUIDGenerator'
 import { BcryptPasswordHasher } from '../adapters/bcrypt/BcryptHasher'
 
 export function makeCreateUserController(): CreateUserController {
-  const userRepository = UserRepositoryInMemory
+  const userRepository = PrismaUserRepository
   const idGenerator = new UuidGenerator()
   const passwordHasher = new BcryptPasswordHasher()
 
