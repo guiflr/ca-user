@@ -1,5 +1,4 @@
 import { User } from '../domain/User'
-import { UpdateUser } from '../usecases/UpdateUser'
 
 export interface UserRepository {
   save(user: User): Promise<void>
