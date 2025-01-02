@@ -8,8 +8,7 @@ export class UpdateUserPasswordController implements Controller {
     try {
       const { id } = request.params
       const { password } = request.body
-      console.log(request.params)
-      console.log(request.body)
+
       if (!id || !password) {
         return {
           statusCode: 400,

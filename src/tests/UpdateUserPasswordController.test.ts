@@ -9,9 +9,9 @@ describe('UpdateUserPasswordController', () => {
 
   const request = {
     body: {
-      id: '123',
       password: 'new_secure_password'
-    }
+    },
+    params: { id: '123' }
   }
 
   beforeEach(() => {
@@ -39,7 +39,8 @@ describe('UpdateUserPasswordController', () => {
     const request = {
       body: {
         password: 'new_secure_password'
-      }
+      },
+      params: {}
     }
 
     const response = await controller.handle(request)
