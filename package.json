@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "dev": "tsc & node dist/server.js",
-    "test": "jest"
+    "test": "jest",
+    "test:build": "jest --config jest.config.build.js"
   },
   "keywords": [],
   "author": "",
