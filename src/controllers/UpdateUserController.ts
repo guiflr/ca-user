@@ -1,8 +1,9 @@
 import { UpdateUser } from '../usecases/UpdateUser'
+import { UpdateUserUseCase } from '../usecases/UserUseCase'
 import { Controller, HttpRequest, HttpResponse } from './Controller'
 
 export class UpdateUserController implements Controller {
-  constructor(private readonly updateUser: UpdateUser) {}
+  constructor(private readonly updateUser: UpdateUserUseCase) {}
 
   async handle(request: HttpRequest): Promise<HttpResponse> {
     try {
